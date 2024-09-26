@@ -30,8 +30,7 @@ uses
   uTitularController in 'src\Controller\uTitularController.pas',
   uEmpresaView.Functions.Controll.Combox in 'src\View\Util\uEmpresaView.Functions.Controll.Combox.pas',
   uEmpresaView.Functions in 'src\View\Util\uEmpresaView.Functions.pas',
-  uView.Persist.Controll.Functions in 'src\View\Util\uView.Persist.Controll.Functions.pas',
-  Unit1 in 'src\Unit1.pas';
+  uView.Persist.Controll.Functions in 'src\View\Util\uView.Persist.Controll.Functions.pas';
 
 {$R *.res}
 

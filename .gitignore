@@ -1,0 +1,73 @@
+# Delphi Generated Files
+*.dcu
+*.dcp
+*.~*
+*.ddp
+*.cfg
+*.local
+*.stat
+*.groupproj.local
+*.drc
+*.dsk
+
+# Backup Files
+*.bak
+*.old
+*.tmp
+*.~*
+
+# Project and Build Files
+*.exe
+*.dll
+*.bpl
+*.map
+*.bpi
+*.dproj
+*.bdsproj
+*.bpg
+*.groupproj
+*.identcache
+*.tvsconfig
+
+# Packages
+*.dcp
+*.bpl
+*.dsk
+*.lib
+*.obj
+
+# IDE Files
+*.local
+*.identcache
+*.remote
+
+# C++ Builder Generated Files
+*.tds
+*.cbproj
+*.bdsproj
+*.groupproj
+
+# MacOS and Linux Files
+.DS_Store
+Thumbs.db
+*.so
+*.dylib
+
+# Debugger
+*.dbg
+*.log
+
+# Environment-specific Files
+*.env
+*.user
+
+# Lazarus (Delphi alternative) specific files
+*.lpi
+*.lps
+lib/
+backup/
+
+# Delphi IDE Settings
+*.identcache
+*.dproj.local
+*.groupproj.local

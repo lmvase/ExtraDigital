@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{B2590F34-F963-4E8B-B873-A49FA260C73B}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="..\CrudProject.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\DUnit\PTestsDUnitX.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="CrudProject">
+        <MSBuild Projects="..\CrudProject.dproj"/>
+    </Target>
+    <Target Name="CrudProject:Clean">
+        <MSBuild Projects="..\CrudProject.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CrudProject:Make">
+        <MSBuild Projects="..\CrudProject.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PTestsDUnitX">
+        <MSBuild Projects="..\DUnit\PTestsDUnitX.dproj"/>
+    </Target>
+    <Target Name="PTestsDUnitX:Clean">
+        <MSBuild Projects="..\DUnit\PTestsDUnitX.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PTestsDUnitX:Make">
+        <MSBuild Projects="..\DUnit\PTestsDUnitX.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="CrudProject;PTestsDUnitX"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="CrudProject:Clean;PTestsDUnitX:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="CrudProject:Make;PTestsDUnitX:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

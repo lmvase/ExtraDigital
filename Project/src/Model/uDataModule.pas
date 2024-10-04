@@ -31,7 +31,7 @@ implementation
 procedure TDataModuleConnect.DataModuleDestroy(Sender: TObject);
 begin
   if FDConnection.Connected then
-    FDConnection.CloneConnection;
+    FDConnection.Close;
   inherited;
 end;
 
